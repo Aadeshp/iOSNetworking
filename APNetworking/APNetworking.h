@@ -8,12 +8,31 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for APNetworking.
-FOUNDATION_EXPORT double APNetworkingVersionNumber;
+typedef NS_ENUM (NSInteger, HTTPRequest) {
+    HTTPRequestPost,
+    HTTPRequestGet,
+    HTTPRequestPatch,
+    HTTPRequestPut,
+    HTTPRequestDelete
+};
 
-//! Project version string for APNetworking.
-FOUNDATION_EXPORT const unsigned char APNetworkingVersionString[];
+typedef NS_ENUM (NSInteger, MimeType) {
+    MimeTypeJson,
+    MimeTypeHtml,
+    MimeTypeFormUrlEncoded
+};
 
-// In this header, you should import all the public headers of your framework using statements like #import <APNetworking/PublicHeader.h>
+@interface APNetworking : NSObject
+
+- (instancetype)init;
+- (instancetype)initWithBaseUrl:(NSString *)baseUrl;
+- (void)setBaseUrl:(NSString *)baseUrl;
+- (NSURLSessionDataTask *)request:(HTTPRequest)request
+         urlext:(NSString *)urlExt
+         params:(id)params
+           mime:(MimeType)mime
+completionBlock:(void(^)(NSData *, NSURLResponse *, NSError *))completionBlock;
+
+@end
 
 
