@@ -16,7 +16,7 @@
 - (NSMutableURLRequest *)getURLRequest:(HTTPRequest)request
                                    url:(NSURL *)url
                                   data:(NSData *)data
-                                  mimeType:(MimeType)mime;
+                              mimeType:(MimeType)mime;
 - (NSDictionary *)paramsToDictionary:(id)params;
 - (NSString *)requestToString:(HTTPRequest)request;
 - (NSString *)mimeTypeToString:(MimeType)mimeType;
@@ -69,10 +69,10 @@
  */
 
 - (NSURLSessionDataTask *)request:(HTTPRequest)request
-         urlext:(NSString *)urlExt
-         params:(id)params
-           mime:(MimeType)mimeType
-completionBlock:(void(^)(NSData *, NSURLResponse *, NSError *))completionBlock
+                           urlext:(NSString *)urlExt
+                           params:(id)params
+                             mime:(MimeType)mimeType
+                  completionBlock:(void(^)(NSData *, NSURLResponse *, NSError *))completionBlock
 {
     //Check if HTTPRequest is Given
     NSParameterAssert(request);
@@ -116,9 +116,9 @@ completionBlock:(void(^)(NSData *, NSURLResponse *, NSError *))completionBlock
 #pragma mark - Create NSURLRequest
 
 - (NSMutableURLRequest *)getURLRequest:(HTTPRequest)request
-                             url:(NSURL *)url
-                            data:(NSData *)data
-                            mimeType:(MimeType)mimeType
+                                   url:(NSURL *)url
+                                  data:(NSData *)data
+                              mimeType:(MimeType)mimeType
 {
     //Check if HTTPRequest and URL are Given
     NSParameterAssert(request);
