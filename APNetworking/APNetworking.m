@@ -2,7 +2,7 @@
 //  APNetworking.m
 //  APNetworking
 //
-//  Created by Aadesh Patel on 1/30/15.
+//  Created by Aadesh Patel
 //  Copyright (c) 2015 Aadesh Patel. All rights reserved.
 //
 
