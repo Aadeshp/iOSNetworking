@@ -39,4 +39,19 @@ void (^completionBlock)(NSData *, NSURLResponse *, NSError *) = ^(NSData *data, 
 __block VariableType VariableName;  //__block allows you to use the variable inside and outside a block
 ```
 
+- HTTPRequest ENUM
+```
+HTTPRequestPost
+HTTPRequestGet
+HTTPRequestPatch
+HTTPRequestPut
+HTTPRequestDelete
+```
+- MimeType ENUM:
+```
+MimeTypeJson (application/json)
+MimeTypeHtml (text/html)
+MimeTypeFormUrlEncoded (application/x-www-form-urlencoded)
+```
+
 
