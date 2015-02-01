@@ -18,20 +18,7 @@ APNetworking *network = [[APNetworking alloc] initWithBaseUrl:@"BASE URL"];
             mime:(MimeType)
  completionBlock:^(NSData *data, NSURLResponse *response, NSError *error) { ... };
  ```
- 
-- HTTPRequest Enum:
-```HTTPRequestPost```
-```HTTPRequestGet```
-```HTTPRequestPut```
-```HTTPRequestPatch```
-```HTTPRequestDelete```
 
-- MimeType Enum:
-```MimeTypeJson```
-```MimeTypeHtml```
-```MimeTypeFormUrlEncoded```
- 
- 
 - Example of Completion Blocks
 
 ```objective-c
