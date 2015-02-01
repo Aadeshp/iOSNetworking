@@ -16,7 +16,7 @@ APNetworking *network = [[APNetworking alloc] initWithBaseUrl:@"BASE URL"];
           urlext:@"URL EXTENSION"
           params:Either as NSString: @"param1=value1&param2=value2..." or NSDictionary @{ "param1": "value1", "param2": "value2"... }
             mime:(MimeType)
- completionBlock:^(NSData *data, NSURLResponse *response, NSError *error) { ... };
+ completionBlock:^(NSData *data, NSURLResponse *response, NSError *error) { ... }];
  ```
 
 - Example of Completion Blocks
